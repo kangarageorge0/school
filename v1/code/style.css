@@ -1,0 +1,12 @@
+*{
+    border-radius: 10px;
+    margin: 2 0 2 0;
+    font-size: 13px;
+}
+
+@media screen and (max-width: 600px) {
+    * {
+        font-size: 18px;
+        padding-top: 10px;
+    }
+}

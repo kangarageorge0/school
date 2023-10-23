@@ -1,0 +1,93 @@
+[
+    ["school_3", "school", [], "id", "kaps"],
+    ["school_3", "stage", [], "year", 2021],
+    
+    {
+        "class_name":"\\mutall\\capture\\csv",
+        "args":[
+            "t1", 
+                       "/mutall_projects/school/v/data/loadables/allocations/KAPS SUBJECTS ALLOCATION grade 1_3.csv",
+            [],
+            ",",  
+            -1,
+            2
+        ]
+    },
+
+    ["school_3", "class", [], "name", ["\\mutall\\capture\\lookup","t1", 0]],
+    ["school_3", "stream", [], "id", ["\\mutall\\capture\\lookup","t1", 1]],
+
+    ["school_3", "subject", ["maths"], "id", "maths"],
+    ["school_3", "staff", ["maths"], "username", ["\\mutall\\capture\\lookup","t1", 2]],
+    ["school_3", "teacher", ["maths"], "teacher", null],
+    ["school_3", "allocation", ["maths"], "allocation", null],
+    
+    
+    ["school_3", "subject", ["engl"], "id", "engl"],
+    ["school_3", "staff", ["engl"], "username", ["\\mutall\\capture\\lookup","t1", 3]],
+    ["school_3", "teacher", ["engl"], "teacher", null],
+    ["school_3", "allocation", ["engl"], "allocation", null],
+    
+    
+    ["school_3", "subject", ["e_lit"], "id", "englit"],
+    ["school_3", "staff", ["e_lit"], "username", ["\\mutall\\capture\\lookup","t1", 4]],
+    ["school_3", "teacher", ["e_lit"], "teacher", null],
+    ["school_3", "allocation", ["e_lit"], "allocation", null],
+    
+          
+    ["school_3", "subject", ["hyg"], "id", "hyg"],
+    ["school_3", "staff", ["hyg"], "username", ["\\mutall\\capture\\lookup","t1",5]],
+    ["school_3", "teacher", ["hyg"], "teacher", null],
+    ["school_3", "allocation", ["hyg"], "allocation", null],
+    
+    
+    ["school_3", "subject", ["kis"], "id", "kiswa"],
+    ["school_3", "staff", ["kis"], "username", ["\\mutall\\capture\\lookup","t1", 6]],
+    ["school_3", "teacher", ["kis"], "teacher", null],
+    ["school_3", "allocation", ["kis"], "allocation", null],
+    
+    
+    ["school_3", "subject", ["env"], "id", "env"],
+    ["school_3", "staff", ["env"], "username", ["\\mutall\\capture\\lookup","t1", 7]],
+    ["school_3", "teacher", ["env"], "teacher", null],
+    ["school_3", "allocation", ["env"], "allocation", null],
+    
+    
+       
+    ["school_3", "subject", ["cre"], "id", "cre"],
+    ["school_3", "staff", ["cre"], "username", ["\\mutall\\capture\\lookup","t1", 8]],
+    ["school_3", "teacher", ["cre"], "teacher", null],
+    ["school_3", "allocation", ["cre"], "allocation", null],
+    
+    
+    ["school_3", "subject", ["movt"], "id", "movt"],
+    ["school_3", "staff", ["movt"], "username", ["\\mutall\\capture\\lookup","t1", 9]],
+    ["school_3", "teacher", ["movt"], "teacher", null],
+    ["school_3", "allocation", ["movt"], "allocation", null],
+    
+   
+    ["school_3", "subject", ["sci"], "id", "sci2"],
+    ["school_3", "staff", ["sci"], "username", ["\\mutall\\capture\\lookup","t1", 7]],
+    ["school_3", "teacher", ["sci"], "teacher", null],
+    ["school_3", "allocation", ["sci"], "allocation", null],
+    
+    
+    ["school_3", "subject", ["art"], "id", "art"],
+    ["school_3", "staff", ["art"], "username", ["\\mutall\\capture\\lookup","t1", 8]],
+    ["school_3", "teacher", ["art"], "teacher", null],
+    ["school_3", "allocation", ["art"], "allocation", null],
+    
+
+    ["school_3", "subject", ["music"], "id", "music"],
+    ["school_3", "staff", ["music"], "username", ["\\mutall\\capture\\lookup","t1", 9]],
+    ["school_3", "teacher", ["music"], "teacher", null],
+    ["school_3", "allocation", ["music"], "allocation", null],
+    
+ 
+    ["school_3", "subject", ["ct"], "id", "ct"],
+    ["school_3", "staff", ["ct"], "username", ["\\mutall\\capture\\lookup","t1", 10]],
+    ["school_3", "teacher", ["ct"], "teacher", null],
+    ["school_3", "allocation", ["ct"], "allocation", null]
+    
+    
+]

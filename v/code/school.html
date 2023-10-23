@@ -1,0 +1,80 @@
+
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 
+        The tile of your project -->
+    <title>School</title>
+    <!-- 
+        Styling the index page in terms of grids -->
+    <link rel="stylesheet" href="school.css" />
+    <script type="module">
+        //
+        //Access the mlima code (library)
+        import{school} from "./school.js";
+        //
+        //When this page loads do the following
+        window.onload = async ()=> {
+            //
+            //Create the mlima class instance, named page
+            const page = new school();
+            //
+            //Expose the page outside of theis script
+            window.page= page;
+            //displaying all the panels on loading
+           // await page.show_panels();
+        };
+    </script>
+
+</head>
+
+<body>
+    <div class="header">
+        <div id="logo">
+           
+        </div>
+        
+        <div id="title">
+            Shule
+            <div class="btn-group">
+                <button onclick="window.location.href='http://localhost/school/v/code/exam.html'">Show Results</button>
+                <button onclick="page.load_result()"> Load Results</button>
+                <button onclick="page.show_events('content')">Show Events</button>
+                <button onclick="page.show_messages('content')">Show Messages</button>
+              </div>
+        </div> 
+         <p id="invitation">
+            <button onclick="page.sign()"> Login</button> to Access Services on this Platform
+        </p>
+
+        <p id="welcome" hidden>
+            Welcome <span id="username" style="color:green;"></span>.
+            Please <span style="color: blue;" onclick="page.logout()">log out</span> when you are done
+        </p>
+    </div>
+    <div id="services">
+        
+    </div>
+    
+    <div id="content"></div>
+    
+    <div id="event">
+     
+    </div>
+
+    <div id="messages">
+        
+    </div>
+
+    <div class="footer">
+        <div id ="developer">
+            <p>   Developed by George Kang'ara </p>  
+            <img id='kangara' src="http://drive.google.com/uc?export=view&id=10KYtxL82ANblZbwrAgMc_R7WoHTu8KKD">
+        </div>
+    </div>
+ 
+</body>
+
+</html>

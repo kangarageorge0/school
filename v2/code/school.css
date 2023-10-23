@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*body {
+    display: grid;
+    gap: 2px;
+    grid-template-rows: 12% 88%;
+    grid-template-areas:
+      "crown "
+      "matrix "
+}
+*/
+
+#crown{
+    background-color: rgb(215, 236, 240);
+    display: flex;
+    justify-content: space-around;
+    font-family: sans-serif; 
+    font-size: 120%;
+}
+
+#matrix{
+    background-color: rgb(181, 236, 190);
+    border-collapse: collapse;
+}
+
+#matrix th,td{
+    border: 0.5px solid azure;
+    text-align: left;
+    padding: 8px;
+}
+
+ #header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: rgb(181, 236, 190);
+}
+
+#filters{
+    display: flex;
+    justify-content: space-around;
+}
+
+label{
+    margin: 1%;
+    display: block;
+}
+
+/*
+Changing the color of the selected column*/
+.selected{
+    background-color: cyan;
+}
+/*
+Show draggable factors on hovering above them*/
+*[draggable]:hover{
+    cursor:move;
+}

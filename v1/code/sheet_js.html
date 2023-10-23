@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Excel Reader</title>
+  <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+  <input type="file" id="inputFile" />
+  <div id="output"></div>
+
+  <script>
+    // Function to handle the file input change event
+    function handleFileChange(event) {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+
+      reader.onload = function(e) {
+        const data = new Uint8Array(e.target.result);
+        const workbook = XLSX.read(data, { type: 'array' });
+
+        const sheetName = workbook.SheetNames[0];
+        const worksheet = workbook.Sheets[sheetName];
+
+        const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+        const outputElement = document.getElementById('output');
+        outputElement.innerText = JSON.stringify(jsonData, null, 2);
+      };
+
+      reader.readAsArrayBuffer(file);
+    }
+
+    // Add event listener to the file input element
+    const inputFileElement = document.getElementById('inputFile');
+    inputFileElement.addEventListener('change', handleFileChange);
+  </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+[
+    ["school_2", "class", [], "name", "2"],
+    ["school_2", "stream", [], "name", "Yellow"],
+    ["school_2", "stream", [], "id", "y"],
+    ["school_2", "exam", [], "name", "Distinction Exam"],
+    
+    ["school_2", "year", [], "value", "2021"], 
+    ["mutall_users", "business", [], "id", "KAPS"],
+    ["school_2", "school", [], "id", "KAPS"],
+    ["mutall_users", "business", [], "name", "Kiserian Adventist Primary School"],
+    ["school_2", "school", [], "name", "Kiserian Adventist Primary School"],
+    
+    ["school_2", "progress", [], "progress", null],
+    ["school_2", "sitting", [], "date", "2021-02-01"],
+    {
+        "class_name":"\\mutall\\capture\\csv",
+        "args":[
+            "t1", 
+               "%s",
+            [],
+            ",",  
+            -1,
+            4
+        ]
+    },
+    ["mutall_users", "user", [], "name", ["\\mutall\\capture\\lookup","t1", 0]],
+    ["school_2", "student", [], "name", ["\\mutall\\capture\\lookup","t1", 0]],
+    
+
+    ["school_2", "performance", ["maths"], "out_of", 25],
+    ["school_2", "subject", ["maths"], "id", "maths"],
+    ["school_2", "subject", ["maths"], "name", "Mathematics"],
+    ["school_2", "score", ["maths"], "value", ["\\mutall\\capture\\lookup","t1", 1]],
+    
+    ["school_2", "performance", ["eng"], "out_of", 50],
+    ["school_2", "subject", ["eng"], "id", "eng"],
+    ["school_2", "subject", ["eng"], "name", "English"],
+    ["school_2", "score", ["eng"], "value", ["\\mutall\\capture\\lookup","t1", 4]],
+
+    ["school_2", "performance", ["hyg"], "out_of", 15],
+    ["school_2", "subject", ["hyg"], "id", "hyg"],
+    ["school_2", "subject", ["hyg"], "name", "Hygiene"],
+    ["school_2", "score", ["hyg"], "value", ["\\mutall\\capture\\lookup","t1", 7]],
+
+    
+    ["school_2", "performance", ["env"], "out_of", 15],
+    ["school_2", "subject", ["env"], "id", "env"],
+    ["school_2", "subject", ["env"], "name", "Environmental"],
+    ["school_2", "score", ["env"], "value", ["\\mutall\\capture\\lookup","t1", 10]],
+
+    ["school_2", "performance", ["kis"], "out_of", 50],
+    ["school_2", "subject", ["kis"], "id", "kiswa"],
+    ["school_2", "subject", ["kis"], "name", "Kiswahili"],
+    ["school_2", "score", ["kis"], "value", ["\\mutall\\capture\\lookup","t1", 13]],
+    
+    ["school_2", "performance", ["cre"], "out_of", 15],
+    ["school_2", "subject", ["cre"], "id", "cre"],
+    ["school_2", "subject", ["cre"], "name", "Christian religious education"],
+    ["school_2", "score", ["cre"], "value", ["\\mutall\\capture\\lookup","t1", 16]]
+    
+]

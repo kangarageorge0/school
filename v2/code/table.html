@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exam Results</title>
+        <link rel="stylesheet" href="school.css">
+        <!--
+        Stylesheet for controlling edit/normal viewing mode. 
+        ??-->
+        <style id="mode">
+            /*
+            Display the sheet in normal mode*/
+            .normal{
+                display:flex;
+            }
+            
+            /*
+            Display the sheet in edit mode*/
+            .edit{
+                display:none;
+            }
+        </style>
+        
+        <script type="module">
+            //
+            import {exam} from "./exam.js";
+            //
+            const Page = new exam();
+            Page.show_panels();
+            
+        </script>
+        
+    </head>
+    <body id="sheet">
+        <div id="crown">
+            <label><span>Page Selector:</span>
+                <select name="Page Selector" id="paginator">
+                </select>
+            </label>
+            <fieldset>
+                <legend>View Mode</legend>
+                <label id="edit">
+                    <input
+                        name="mode"
+                        value="edit"
+                        type="radio"
+                    >
+                    <span>Edit</span><br>
+                </label>  
+                <label >
+                    <button id='save' >save</button>
+                </label> 
+                
+                <label id="normal" >
+                    <input
+                        name="mode"
+                        value="count"
+                        type="radio"
+                        checked
+                    >
+                    <span>Normal</span>
+                </label>
+            </fieldset>
+            <fieldset >
+                <legend>Filters</legend>
+                <div id="filters"></div>
+            </fieldset>
+            <fieldset>
+                <legend>Summary Type</legend>
+                <div id="summary"></div>
+                <label id="total" >
+                    <input
+                        name="summary"
+                        value="total"
+                        type="checkbox"
+                        checked
+                    >
+                    <span>Total</span><br>
+                </label>  
+                <label id="count" >
+                    <input
+                        name="summary"
+                        value="count"
+                        type="checkbox"
+                    >
+                    <span>Normal</span>
+                </label>
+                <label id="ranking" >
+                    <input
+                        name="summary"
+                        value="ranking"
+                        type="checkbox"
+                        checked
+                    >
+                    <span>Ranking</span><br>
+                </label>  
+                <label id="mean" >
+                    <input
+                        name="summary"
+                        value="mean"
+                        type="checkbox"
+                    >
+                    <span>Mean</span>
+                </label>
+            </fieldset>
+            <!-- 
+            To support debugging of this page -->
+            <fieldset>
+                <legend>Debug Services</legend>
+                <button id="save_sql">Save Sql to Clipboard</button>
+            </fieldset>
+        </div>
+        <table id="matrix">
+            <thead id="header">
+            </thead>
+            <tbody id="body">  
+            </tbody>    
+        </table>
+    </body>
+    
+</html>

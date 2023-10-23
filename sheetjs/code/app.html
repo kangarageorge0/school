@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+
+    <head>
+        <title>sheetjs</title>
+        <link rel="stylesheet" href="sheetjs.css">
+        <script type="module">
+            //
+            import{append_form, update_display} from "./update_display.js";
+            //
+            //Append the sheet js form immedietly the document completes loading
+            window.onload = async()=>{
+                //
+                append_form();
+            };
+            //
+            window.update_display = update_display;
+        </script>
+    </head>
+
+    <body>
+        <!-- The sheetjs template will be painted here programmatically -->
+    </body>
+
+</html>

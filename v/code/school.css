@@ -1,0 +1,287 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    border-radius: 5px;
+}
+
+
+/*Grid design and styling procedure*/
+
+body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    display: grid;
+    /* gap: 5px; */
+    grid-template-columns: 1fr 2fr 1fr;
+    /* represents a fraction of the available space in the grid container */
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+    grid-template-areas: 
+        "header header header"
+        "services content event"
+        "services content message"
+        "footer footer footer";
+}
+
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+    grid-template-areas: "logo title welcome";
+    flex-direction: row;
+    background-color: lightgoldenrodyellow;
+}
+
+#company {
+    grid-area: company;
+    font-weight: bold;
+    font-size: 26px;
+    margin-left: 100px
+}
+
+#logo {
+    grid-area: logo;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+
+.heading {
+    grid-row: header;
+}
+
+#welcome {
+    grid-area: welcome;
+    /* overflow: scroll; */
+    overflow-x: hidden;
+}
+
+#services {
+    grid-area: services;
+    background-color: lightgoldenrodyellow;
+    line-height: 1.5;
+    overflow: auto;
+    resize: horizontal;
+    /* allows one to resize the grid area horizontally */
+}
+
+#content {
+    grid-area: content;
+    background-color: white;
+    overflow: auto;
+
+}
+
+    #event {
+        grid-area: event;
+        background-color: lightblue;
+        overflow: auto;
+        resize: both;
+        /* allows one to resize the grid area horizontally and vertically */
+        min-width: 220px;
+        max-width: 800px;
+        min-height: 138px;
+        max-height: 280px;
+    }
+
+    #message {
+        grid-area: message;
+        background-color: lightcyan;
+        overflow: auto;
+        resize: both;
+        /* allows one to resize the grid area horizontally and vertically  */
+        min-width: 220px;
+        max-width: 800px;
+        min-height: 138px;
+        max-height: 300px;
+    }
+
+    /*
+    An anchor tag without a href*/
+    a{
+        text-decoration: underline;
+        color: blue;
+        font-weight: bold;
+    }
+
+    /* 
+    Convert the cursor to a pointer. */
+    a:hover {
+        cursor: pointer;
+    }
+
+    /*
+    Ancho tags undrer services shoul be diaplayes in their own lines*/
+    #services>a{
+        display:block;
+    }
+
+    .footer {
+        grid-area: footer;
+        display: grid;
+        grid-template-columns: 25% 50% 25%;
+        background-color: lightblue;
+        min-height: 80px;
+    }
+    #developer {
+        grid-row: footer;
+        display: flex;
+        gap:5%;
+        padding-left: 10px;
+        padding-bottom: 10px;
+    }
+    #kangara {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    }
+
+    #signature {
+        grid-row: footer;
+        float: left;
+        font-weight: bold;
+        padding-top: 35px;
+        padding-bottom: 50px;
+    }
+
+    #organization {
+        grid-row: footer;
+        place-self: center;
+        font-weight: bold;
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
+
+    #login {
+        text-decoration: none;
+        width: 100px;
+        height: 30px;
+    }
+
+    /*
+    Tame select tag's properties */
+    #selection {
+        width: auto;
+    }
+
+
+    /*
+    Media query for the phone*/
+
+    @media all and (max-width:600px) {
+        body {
+            height: auto;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 60% 40%;
+            grid-template-rows: 20% 10% 60% 10%;
+            grid-template-areas: "header header""welcome welcome""services services""footer footer";
+        }
+
+        .header {
+            display: grid;
+            grid-area: header;
+            grid-template-columns: 30% 70%;
+            grid-template-rows: 100%;
+            grid-template-areas: "logo rate";
+            padding: 5px
+        }
+
+        #logo {
+            grid-area: logo;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #logo img {
+            height: 80%;
+            width: 80%;
+        }
+
+        #rate {
+            margin: 10px 10px 0 0;
+            grid-area: rate;
+            display: flex;
+            flex-direction: row;
+            background-color: lightgoldenrodyellow;
+        }
+
+        #welcome {
+            grid-area: welcome;
+            background-color: lightgoldenrodyellow;
+        }
+
+        #selection {
+            height: fit-content;
+            width: fit-content;
+        }
+
+        #services {
+            grid-area: services;
+            display: flex;
+            flex-direction: column;
+            width: auto;
+        }
+
+        .footer {
+            grid-area: footer;
+            display: flex;
+            flex-direction: row;
+        }
+
+        #content {
+            display: none;
+        }
+
+        #message {
+            display: none;
+        }
+
+        #event {
+            display: none;
+        }
+
+        .header #company {
+            display: none;
+        }
+        /*  */
+        #developer {
+            grid-row: footer;
+            padding-left: 10px;
+            padding-bottom: 10px;
+        }
+
+        #signature {
+            font-weight: bold;
+            font-size: 16px;
+            padding-top: 3px;
+            padding-bottom: 5px;
+        }
+
+        #company {
+            place-self: start;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 5px;
+        }
+
+        /*  */
+        .img_dev {
+            width: 80%;
+            max-height: 800%;
+            border-radius: 50%;
+            margin-left: 0;
+            margin-bottom: 0;
+            padding: 0;
+        }
+    }
+
+
+    details>details, details>div{
+        margin-left: 30px;
+    }

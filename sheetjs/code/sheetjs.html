@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SheetJs</title>
+
+        <link rel="stylesheet" href="sheetjs.css">
+        <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+
+        <script type="module">
+            //
+            import{sheetjs} from "./sheetjs.js";
+            //
+            //Append the sheet js form immedietly the document completes loading
+            window.onload = async() =>
+            {
+                //
+                //Create the sheet js user interface
+                const page = new sheetjs();
+                //
+                //Initialize the page with empty data on loading the form
+                await page.onload();
+                //
+                window.page = page;
+            };
+            
+        </script>
+    </head>
+
+    <body>
+        <!-- Clear previous form errors on input -->
+        <form  oninput="page.oninput()">
+
+            <h2 ><u>Select Data To Load</u></h2>
+
+            <fieldset  data-field="source">
+                
+                <legend>
+                    <h2>Source of data</h2>
+                </legend>
+
+                <fieldset>
+                    <legend >
+                        <input type="radio" name="source">
+                        Digital Ocean
+                    </legend>
+                    <label>Specify Path:
+                        <input type="text" name="fileInput">
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>
+                        <input type="radio" name="source" >
+                        Local Client
+                    </legend>
+                    <fieldset data-field="mltiple_or_single">
+                        <legend>
+                            <h3>Do You Want to Load Single or Multiple Files?</h3>
+                        </legend>
+                        <fieldset >
+                            <legend >
+                                <input type="radio" name="mutliple_or_single">
+                                Single
+                            </legend>
+
+                            <fieldset>
+                                <legend> Choose a workbook </legend>
+                                <input type="file" id='file' accept=".xlsx" onchange="page.get_worksheets(this)">
+                            </fieldset>
+
+                            <label >
+                                Choose a worksheet
+
+                                <select id="worksheet"> 
+                                </select>
+                            </label>
+
+                            <label>
+                                &nbsp;&nbsp; Choose a Named Range
+                                <select id="range">
+                                </select>
+                            </label>
+
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>
+                                <input type="radio" name="mutliple_or_single">
+                                Multiple
+                            </legend>
+                            <input type="file" multiple>
+                        </fieldset>
+                    </fieldset>
+
+                </fieldset>
+
+                <fieldset >
+                    <legend>
+                        <input type="radio" name="source">
+                        Other Server
+                    </legend>
+                    <label>Specify URL:
+                        <input type="text">
+                    </label>
+
+                </fieldset>
+
+            </fieldset>
+
+            <button onclick="sheetjs.onsave()">Save</button>
+            <button onclick="sheetjs.oncancel()">Cancel</button>
+
+        </form>
+
+    </body>
+
+</html>

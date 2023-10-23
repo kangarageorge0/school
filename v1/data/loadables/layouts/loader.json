@@ -1,0 +1,60 @@
+[
+    ["school", "grade", [], "name", "1"],
+    ["school", "stream", [], "name", "yellow"],
+    ["school", "exam", [], "name", "Mid Exam"],
+    ["school", "sitting", [], "date", "2021-02-01"],
+
+    ["school", "stage", [], "year", "2021"],
+    
+    ["school", "school", [], "id", "KAPS"],
+    ["school", "school", [], "name", "Kiserian Adventist Primary School"],
+    ["school", "progress", [], "progress", null],
+    
+    {
+        "class_name":"\\capture\\csv",
+        "args":[
+            "t1", 
+            "/mutall_projects/school/v/data_csv/GRADE 4B  TARGETER.csv",
+            [],
+            ",",  
+            -1,
+            4
+        ]
+    },
+
+    ["school", "student", [], "name", ["capture\\lookup","t1", 0]],
+
+    ["school", "subject", ["maths"], "name", "maths"],
+    ["school", "score", ["maths"], "value", ["capture\\lookup","t1", 1]],
+    ["school", "score", ["maths"], "percent", ["capture\\lookup","t1", 2]],
+    ["school", "score", ["maths"], "grade", ["capture\\lookup","t1", 3]],
+    
+    ["school", "subject", ["eng"], "name", "english"],
+    ["school", "score", ["eng"], "value", ["capture\\lookup","t1", 4]],
+    ["school", "score", ["eng"], "percent", ["capture\\lookup","t1", 5]],
+    ["school", "score", ["eng"], "grade", ["capture\\lookup","t1", 6]],
+    
+    ["school", "subject", ["hygene"], "name", "hygene"],
+    ["school", "score", ["hygene"], "value", ["capture\\lookup","t1", 7]],
+    ["school", "score", ["hygene"], "percent", ["capture\\lookup","t1", 8]],
+    ["school", "score", ["hygene"], "grade", ["capture\\lookup","t1", 9]],
+    
+    ["school", "subject", ["environmental"], "name", "environmental"],
+    ["school", "score", ["environmental"], "value", ["capture\\lookup","t1", 10]],
+    ["school", "score", ["environmental"], "percent", ["capture\\lookup","t1", 11]],
+    ["school", "score", ["environmental"], "grade", ["capture\\lookup","t1", 12]],
+    
+    ["school", "subject", ["kiswahili"], "name", "kiswahili"],
+    ["school", "score", ["kiswahili"], "value", ["capture\\lookup","t1", 13]],
+    ["school", "score", ["kiswahili"], "percent", ["capture\\lookup","t1", 14]],
+    ["school", "score", ["kiswahili"], "grade", ["capture\\lookup","t1", 15]],
+    
+    ["school", "subject", ["CRE"], "name", "CRE"],
+    ["school", "score", ["CRE"], "value", ["capture\\lookup","t1", 16]],
+    ["school", "score", ["CRE"], "percent", ["capture\\lookup","t1", 17]],
+    ["school", "score", ["CRE"], "grade", ["capture\\lookup","t1", 18]]
+    
+    
+    
+ 
+]

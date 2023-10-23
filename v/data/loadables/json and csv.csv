@@ -1,0 +1,71 @@
+scores/GRADE 1  DISTINCTION EXAM FEB 2021 Red.csv,questionnaire_grade2.json
+scores/GRADE 1  DISTINCTION EXAM FEB 2021 yellow.csv,questionnaire_grade2.json
+scores/GRADE 4 CBC ASSESSMENT.csv,questionnaire_grade4CBC.json
+scores/GRADE 4 RED TARGETER.csv,questionnaire_grade4targeter.json
+scores/GRADE 4 Y CBC ASSESSMENT.csv,questionnaire_grade4CBC.json
+scores/GRADE 4 YELLOW.csv,questionnaire_grade4dist.json
+scores/GRADE 4 yellow DISTINGTION EXAM.csv,questionnaire_grade4dist.json
+scores/GRADE 4B CBC ASSESSMENT.csv,questionnaire_grade4CBC.json
+scores/GRADE 4B MID FEB DISTINGTION EXAM.csv,questionnaire_grade4dist.json
+scores/GRADE 4B TARGETER.csv,questionnaire_grade4targeter.json
+scores/GRADE 4G CBC ASSESSMENT.csv,questionnaire_grade4CBC.json
+scores/GRADE 4R CBC ASSESSMENT.csv,questionnaire_grade4CBC.json
+scores/GRADE 4R DISTINGTION MID FEB EXAM.csv,questionnaire_grade4dist.json
+scores/GRADE 4Y TARGETER 1.csv,questionnaire_grade4targeter.json
+scores/DOUBLEMERIT GRADE 7 RED.csv,questionnaire_grade7.json
+scores/DOUBLEMERIT GRADE 7 YELLOW.csv,questionnaire_grade7.json
+scores/JESMA003 GRADE 7 RED.csv,questionnaire_grade7.json
+scores/JESMA003 GRADE 7 YELLOW.csv,questionnaire_grade7.json
+scores/JESMA004 CLASS 8 YELLOW.csv,questionnaire_grade7.json
+scores/JESMA004 CLASS 8 RED.csv,questionnaire_grade7.json
+scores/JESMA005 GRADE 7 RED.csv,questionnaire_class8overall.json
+scores/JESMA005 GRADE 7 YELLOW.csv,questionnaire_class8overall.json
+scores/MERIT004 GRADE 7 RED.csv,questionnaire_grade7.json
+scores/MERIT004 GRADE 7 YELLOW.csv,questionnaire_grade7.json
+scores/SIG002 GRADE 7 RED.csv,questionnaire_grade7.json
+scores/SIG002 GRADE 7 YELLOW.csv,questionnaire_grade7.json
+scores/TRACKER005 GRADE 7 RED.csv,questionnaire_class8overall.json
+scores/TRACKER005 GRADE 7 YELLOW.csv,questionnaire_class8overall.json
+scores/WINGS003 GRADE 7 RED.csv,questionnaire_grade7.json
+scores/WINGS003 GRADE 7 YELLOW.csv,questionnaire_grade7.json
+scores/CLASS 8 RED TARGETER.csv,questionnaire_class8overall.json
+scores/CLASS 8 YELLOW TARGETER.csv,questionnaire_class8overall.json
+scores/JESMA004 CLASS 8 RED.csv,questionnaire_class8overall.json
+scores/JESMA004 CLASS 8 YELLOW.csv,questionnaire_class8overall.json
+scores/JOINT 1 STD 8 RED.csv,questionnaire_class8overall.json
+scores/JOINT 1 STD 8 YELLOW.csv,questionnaire_class8overall.json
+scores/JOINT2 STD 8 red.csv,questionnaire_class8overall.json
+scores/JOINT2 STD 8 yello.csv,questionnaire_class8overall.json
+scores/KCPE 2020.csv,questionnaire_class8.json
+scores/KNAS2 CLASS 8 RED.csv,questionnaire_class8overall.json
+scores/KNAS2 CLASS 8 YELLOW.csv,questionnaire_class8overall.json
+scores/KNAT1 CLASS 8 RED.csv,questionnaire_class8overall.json
+scores/KNAT1 CLASS 8 YELLOW.csv,questionnaire_class8overall.json
+scores/KNAT2 CLASS 8 RED.csv,questionnaire_class8overall.json
+scores/KNAT2 CLASS 8 YELLOW.csv,questionnaire_class8overall.json
+scores/KNAT3 CLASS 8 RED.csv,questionnaire_class8overall.json
+scores/KNAT3 CLASS 8 YELLOW.csv,questionnaire_class8overall.json
+scores/KNAT4 STD 8 RED.csv,questionnaire_class8overall.json
+scores/KNAT4 STD 8yellow.csv,questionnaire_class8overall.json
+scores/KNEC CLASS 8 RED.csv,questionnaire_class8overall.json
+scores/KNEC CLASS 8 YELLOW.csv,questionnaire_class8overall.json
+scores/KNES1 CLASS 8 RED.csv,questionnaire_class8overall.json
+scores/KNES1 CLASS 8 YELLOW.csv,questionnaire_class8overall.json
+scores/NAIROBI COUNTY CLASS 8 RED.csv,questionnaire_class8overall.json
+scores/NAIROBI COUNTY CLASS 8 YELLOW.csv,questionnaire_class8overall.json
+scores/SIGNAL001 CLASS 8 RED.csv,questionnaire_class8overall.json
+scores/SIGNAL001 CLASS 8 YELLOW.csv,questionnaire_class8overall.json
+scores/SIGNAL05 CLASS8 RED.csv,questionnaire_class8overall.json
+scores/SIGNAL05 CLASS8 YELLOW.csv,questionnaire_class8overall.json
+scores/STD8 red 2020.csv,questionnaire_class8.json
+scores/std8 yellow 2020.csv,questionnaire_class8.json
+scores/TAR.MERIT 005 CLASS 8 RED.csv,questionnaire_class8overall.json
+scores/TAR.MERIT 005 CLASS 8 YELLOW.csv,questionnaire_class8overall.json
+scores/TAR04 CLASS 8 RED.csv,questionnaire_class8overall.json
+scores/TAR04 CLASS 8 YELLOW.csv,questionnaire_class8overall.json
+scores/TRACKER01 CLASS 8 RED.csv,questionnaire_class8overall.json
+scores/TRACKER01 CLASS 8 RED.csv,questionnaire_class8overall.json
+scores/class 8 red 2020.csv,questionnaire_class8.json
+scores/class 8 red 2020.csv,questionnaire_class8overall.json
+timetables/UPPER PRIMARY TIMETABLE.csv,subject_allocation_grade1.json
+allocations/KAPS SUBJECTS ALLOCATION grade 1_3.csv,subject_allocation_grade1_3.json

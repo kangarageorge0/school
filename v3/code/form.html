@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Scores form</title>
+        <link rel="stylesheet" href="school.css">
+    </head>
+    <body>
+        <div class="header">
+            <label ><span>school:</span>
+                <select name="school" id="school">
+                    <option value="KAPS">KAPS</option>
+                </select>
+            </label>
+                <label><span>class:</span>
+                    <select name="class" id="class">
+                        <option value="eight">8</option>
+                        <option value="seven">7</option>
+                        <option value="six">6</option>
+                        <option value="four">4</option>
+                    </select> 
+                </label>
+            <label><span>stream:</span>
+                <select name="stream" id="stream">
+                    <option value="red">r</option>
+                    <option value="yellow">y</option>
+                    <option value="blue">b</option>
+                    <option value="green">g</option>
+                </select>
+            </label>
+            <label><span>sitting:</span>
+                <select name="sittting" id="sitting">
+                    <option value="one">1</option>
+                    <option value="two">2</option>
+                    <option value="three">3</option>
+                    <option value="four">4</option>
+                </select>
+            </label>
+            <label><span>year:</span>
+                <select name="year" id="year">
+                    <option value="one">2019</option>
+                    <option value="two">2020</option>
+                    <option value="three">2021</option>
+                </select>
+            </label>
+            <label>
+                <button >refresh</button><span></span>
+            </label>
+        </div>
+        <div class="body">
+            <table id='result'>
+                <thead>
+                    <tr>
+                        <th rowspan="2" colspan="2"> Identifiers:</th>
+                        <th colspan="69" class="rawValues">raw values:</th>
+                        <th rowspan="2" colspan="2"> Summary:</th>
+                    </tr>
+                    <tr>
+                        <th colspan="3" >maths</th>
+                        <th colspan="3">eng</th>
+                        <th colspan="3">engl</th>
+                        <th colspan="3">englit</th>
+                        <th colspan="3">com</th>
+                        <th colspan="3">comp</th>
+                        <th colspan="3">kiswa</th>
+                        <th colspan="3">kuso_i</th>
+                        <th colspan="3">kiswl</th>
+                        <th colspan="3">kus</th>
+                        <th colspan="3">ins</th>
+                        <th colspan="3">sar</th>
+                        <th colspan="3">ufa</th>
+                        <th colspan="3">sci</th>
+                        <th colspan="3">ss</th>
+                        <th colspan="3">cre</th>
+                        <th colspan="3">hyg</th>
+                        <th colspan="3">agri</th>
+                        <th colspan="3">hsc</th>
+                        <th colspan="3">phe</th>
+                        <th colspan="3">art</th>
+                        <th colspan="3">music</th>
+                        <th colspan="3">now</th>
+                    </tr>
+                    <tr>
+                        <th id="student">Student</th>
+                        <th id="gender">Gender</th>
+                        <th id="maths_value">value</th>
+                        <th id="maths_percent">%</th>
+                        <th id="maths_grade">grd</th>
+                        <th id="eng_value">value</th>
+                        <th id="eng_percent">%</th>
+                        <th id="eng_grade">grd</th>
+                        <th id="engl_value">value</th>
+                        <th id="engl_percent">%</th>
+                        <th id="engl_grade">grd</th>
+                        <th id="englit_value">value</th>
+                        <th id="englit_percent">%</th>
+                        <th id="englit_grade">grd</th>
+                        <th id="com_value">value</th>
+                        <th id="com_percent">%</th>
+                        <th id="com_grade">grd</th>
+                        <th id="comp_value">value</th>
+                        <th id="comp_percent">%</th>
+                        <th id="comp_grade">grd</th>
+                        <th id="kiswa_value">value</th>
+                        <th id="kiswa_percent">%</th>
+                        <th id="kiswa_grade">grd</th>
+                        <th id="kuso_i_value">value</th>
+                        <th id="kuso_i_percent">%</th>
+                        <th id="kuso_i_grade">grd</th>
+                        <th id="kiswl_value">value</th>
+                        <th id="kiswl_percent">%</th>
+                        <th id="kiswl_grade">grd</th>
+                        <th id="kus_value">value</th>
+                        <th id="kus_percent">%</th>
+                        <th id="kus_grade">grd</th>
+                        <th id="ins_value">value</th>
+                        <th id="ins_percent">%</th>
+                        <th id="ins_grade">grd</th>
+                        <th id="sar_value">value</th>
+                        <th id="sar_percent">%</th>
+                        <th id="sar_grade">grd</th>
+                        <th id="ufa_value">value</th>
+                        <th id="ufa_percent">%</th>
+                        <th id="ufa_grade">grd</th>
+                        <th id="sci_value">value</th>
+                        <th id="sci_percent">%</th>
+                        <th id="sci_grade">grd</th>
+                        <th id="ss_value">value</th>
+                        <th id="ss_percent">%</th>
+                        <th id="ss_grade">grd</th>
+                        <th id="cre_value">value</th>
+                        <th id="cre_percent">%</th>
+                        <th id="cre_grade">grd</th>
+                        <th id="hyg_value">value</th>
+                        <th id="hyg_percent">%</th>
+                        <th id="hyg_grade">grd</th>
+                        <th id="agri_value">value</th>
+                        <th id="agri_percent">%</th>
+                        <th id="agri_grade">grd</th>
+                        <th id="hsc_value">value</th>
+                        <th id="hsc_percent">%</th>
+                        <th id="hsc_grade">grd</th>
+                        <th id="phe_value">value</th>
+                        <th id="phe_percent">%</th>
+                        <th id="phe_grade">grd</th>
+                        <th id="art_value">value</th>
+                        <th id="art_percent">%</th>
+                        <th id="art_grade">grd</th>
+                        <th id="music_value">value</th>
+                        <th id="music_percent">%</th>
+                        <th id="music_grade">grd</th>
+                        <th id="now_value">value</th>
+                        <th id="now_percent">%</th>
+                        <th id="now_grade">grd</th>
+                        <th id="total">total</th>
+                        <th id="ranking">ranking</th>
+                    </tr>
+                </thead>
+                <tboby>
+                    <tr>
+                    <td>Peter Muraya</td>
+                    <td>Male</td>
+                    <td>40</td>
+                    <td>80</td>
+                    <td>A</td>
+                    <td>30</td>
+                    <td>60</td>
+                    <td>B</td>
+                    <td>45</td>
+                    <td>90</td>
+                    <td>A</td>
+                    <td>50</td>
+                    <td>100</td>
+                    <td>A</td>
+                    <td>20</td>
+                    <td>40</td>
+                    <td>D+</td>
+                    <td>31</td>
+                    <td>62</td>
+                    <td>B</td>
+                    <td>36</td>
+                    <td>72</td>
+                    <td>B+</td>
+                    <td>10</td>
+                    <td>20</td>
+                    <td>E</td>
+                    <td>9</td>
+                    <td>18</td>
+                    <td>E</td>
+                    <td>50</td>
+                    <td>100</td>
+                    <td>A</td>
+                    <td>39</td>
+                    <td>78</td>
+                    <td>A-</td>
+                    <td>50</td>
+                    <td>100</td>
+                    <td>A</td>
+                    <td>25</td>
+                    <td>50</td>
+                    <td>C+</td>
+                    <td>26</td>
+                    <td>52</td>
+                    <td>C+</td>
+                    <td>30</td>
+                    <td>60</td>
+                    <td>B-</td>
+                    <td>35</td>
+                    <td>70</td>
+                    <td>B</td>
+                    <td>36</td>
+                    <td>72</td>
+                    <td>B</td>
+                    <td>29</td>
+                    <td>58</td>
+                    <td>C+</td>
+                    <td>40</td>
+                    <td>80</td>
+                    <td>A</td>
+                    <td>37</td>
+                    <td>74</td>
+                    <td>B+</td>
+                    <td>46</td>
+                    <td>92</td>
+                    <td>A</td>
+                    <td>10</td>
+                    <td>20</td>
+                    <td>E</td>
+                    <td>37</td>
+                    <td>74</td>
+                    <td>B+</td>
+                    <td>756</td>
+                    <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Peter Muraya</td>
+                        <td>Male</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B</td>
+                        <td>45</td>
+                        <td>90</td>
+                        <td>A</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>20</td>
+                        <td>40</td>
+                        <td>D+</td>
+                        <td>31</td>
+                        <td>62</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B+</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>9</td>
+                        <td>18</td>
+                        <td>E</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>39</td>
+                        <td>78</td>
+                        <td>A-</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>25</td>
+                        <td>50</td>
+                        <td>C+</td>
+                        <td>26</td>
+                        <td>52</td>
+                        <td>C+</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B-</td>
+                        <td>35</td>
+                        <td>70</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B</td>
+                        <td>29</td>
+                        <td>58</td>
+                        <td>C+</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>46</td>
+                        <td>92</td>
+                        <td>A</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>756</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <tr>
+                        <td>Peter Muraya</td>
+                        <td>Male</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B</td>
+                        <td>45</td>
+                        <td>90</td>
+                        <td>A</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>20</td>
+                        <td>40</td>
+                        <td>D+</td>
+                        <td>31</td>
+                        <td>62</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B+</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>9</td>
+                        <td>18</td>
+                        <td>E</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>39</td>
+                        <td>78</td>
+                        <td>A-</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>25</td>
+                        <td>50</td>
+                        <td>C+</td>
+                        <td>26</td>
+                        <td>52</td>
+                        <td>C+</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B-</td>
+                        <td>35</td>
+                        <td>70</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B</td>
+                        <td>29</td>
+                        <td>58</td>
+                        <td>C+</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>46</td>
+                        <td>92</td>
+                        <td>A</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>756</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+<tr>
+                        <td>Peter Muraya</td>
+                        <td>Male</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B</td>
+                        <td>45</td>
+                        <td>90</td>
+                        <td>A</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>20</td>
+                        <td>40</td>
+                        <td>D+</td>
+                        <td>31</td>
+                        <td>62</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B+</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>9</td>
+                        <td>18</td>
+                        <td>E</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>39</td>
+                        <td>78</td>
+                        <td>A-</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>25</td>
+                        <td>50</td>
+                        <td>C+</td>
+                        <td>26</td>
+                        <td>52</td>
+                        <td>C+</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B-</td>
+                        <td>35</td>
+                        <td>70</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B</td>
+                        <td>29</td>
+                        <td>58</td>
+                        <td>C+</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>46</td>
+                        <td>92</td>
+                        <td>A</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>756</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+<tr>
+                        <td>Peter Muraya</td>
+                        <td>Male</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B</td>
+                        <td>45</td>
+                        <td>90</td>
+                        <td>A</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>20</td>
+                        <td>40</td>
+                        <td>D+</td>
+                        <td>31</td>
+                        <td>62</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B+</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>9</td>
+                        <td>18</td>
+                        <td>E</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>39</td>
+                        <td>78</td>
+                        <td>A-</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>25</td>
+                        <td>50</td>
+                        <td>C+</td>
+                        <td>26</td>
+                        <td>52</td>
+                        <td>C+</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B-</td>
+                        <td>35</td>
+                        <td>70</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B</td>
+                        <td>29</td>
+                        <td>58</td>
+                        <td>C+</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>46</td>
+                        <td>92</td>
+                        <td>A</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>756</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+<tr>
+                        <td>Peter Muraya</td>
+                        <td>Male</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B</td>
+                        <td>45</td>
+                        <td>90</td>
+                        <td>A</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>20</td>
+                        <td>40</td>
+                        <td>D+</td>
+                        <td>31</td>
+                        <td>62</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B+</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>9</td>
+                        <td>18</td>
+                        <td>E</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>39</td>
+                        <td>78</td>
+                        <td>A-</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>25</td>
+                        <td>50</td>
+                        <td>C+</td>
+                        <td>26</td>
+                        <td>52</td>
+                        <td>C+</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B-</td>
+                        <td>35</td>
+                        <td>70</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B</td>
+                        <td>29</td>
+                        <td>58</td>
+                        <td>C+</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>46</td>
+                        <td>92</td>
+                        <td>A</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>756</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+<tr>
+                        <td>Peter Muraya</td>
+                        <td>Male</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B</td>
+                        <td>45</td>
+                        <td>90</td>
+                        <td>A</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>20</td>
+                        <td>40</td>
+                        <td>D+</td>
+                        <td>31</td>
+                        <td>62</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B+</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>9</td>
+                        <td>18</td>
+                        <td>E</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>39</td>
+                        <td>78</td>
+                        <td>A-</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>25</td>
+                        <td>50</td>
+                        <td>C+</td>
+                        <td>26</td>
+                        <td>52</td>
+                        <td>C+</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B-</td>
+                        <td>35</td>
+                        <td>70</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B</td>
+                        <td>29</td>
+                        <td>58</td>
+                        <td>C+</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>46</td>
+                        <td>92</td>
+                        <td>A</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>756</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+<tr>
+                        <td>Peter Muraya</td>
+                        <td>Male</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B</td>
+                        <td>45</td>
+                        <td>90</td>
+                        <td>A</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>20</td>
+                        <td>40</td>
+                        <td>D+</td>
+                        <td>31</td>
+                        <td>62</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B+</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>9</td>
+                        <td>18</td>
+                        <td>E</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>39</td>
+                        <td>78</td>
+                        <td>A-</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>25</td>
+                        <td>50</td>
+                        <td>C+</td>
+                        <td>26</td>
+                        <td>52</td>
+                        <td>C+</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B-</td>
+                        <td>35</td>
+                        <td>70</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B</td>
+                        <td>29</td>
+                        <td>58</td>
+                        <td>C+</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>46</td>
+                        <td>92</td>
+                        <td>A</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>756</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+
+                        <td>Peter Muraya</td>
+                        <td>Male</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B</td>
+                        <td>45</td>
+                        <td>90</td>
+                        <td>A</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>20</td>
+                        <td>40</td>
+                        <td>D+</td>
+                        <td>31</td>
+                        <td>62</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B+</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>9</td>
+                        <td>18</td>
+                        <td>E</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>39</td>
+                        <td>78</td>
+                        <td>A-</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>25</td>
+                        <td>50</td>
+                        <td>C+</td>
+                        <td>26</td>
+                        <td>52</td>
+                        <td>C+</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B-</td>
+                        <td>35</td>
+                        <td>70</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B</td>
+                        <td>29</td>
+                        <td>58</td>
+                        <td>C+</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>46</td>
+                        <td>92</td>
+                        <td>A</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>756</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Peter Muraya</td>
+                        <td>Male</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B</td>
+                        <td>45</td>
+                        <td>90</td>
+                        <td>A</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>20</td>
+                        <td>40</td>
+                        <td>D+</td>
+                        <td>31</td>
+                        <td>62</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B+</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>9</td>
+                        <td>18</td>
+                        <td>E</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>39</td>
+                        <td>78</td>
+                        <td>A-</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>25</td>
+                        <td>50</td>
+                        <td>C+</td>
+                        <td>26</td>
+                        <td>52</td>
+                        <td>C+</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B-</td>
+                        <td>35</td>
+                        <td>70</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B</td>
+                        <td>29</td>
+                        <td>58</td>
+                        <td>C+</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>46</td>
+                        <td>92</td>
+                        <td>A</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>756</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Peter Muraya</td>
+                        <td>Male</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B</td>
+                        <td>45</td>
+                        <td>90</td>
+                        <td>A</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>20</td>
+                        <td>40</td>
+                        <td>D+</td>
+                        <td>31</td>
+                        <td>62</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B+</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>9</td>
+                        <td>18</td>
+                        <td>E</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>39</td>
+                        <td>78</td>
+                        <td>A-</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>25</td>
+                        <td>50</td>
+                        <td>C+</td>
+                        <td>26</td>
+                        <td>52</td>
+                        <td>C+</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B-</td>
+                        <td>35</td>
+                        <td>70</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B</td>
+                        <td>29</td>
+                        <td>58</td>
+                        <td>C+</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>46</td>
+                        <td>92</td>
+                        <td>A</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>756</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Peter Muraya</td>
+                        <td>Male</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B</td>
+                        <td>45</td>
+                        <td>90</td>
+                        <td>A</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>20</td>
+                        <td>40</td>
+                        <td>D+</td>
+                        <td>31</td>
+                        <td>62</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B+</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>9</td>
+                        <td>18</td>
+                        <td>E</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>39</td>
+                        <td>78</td>
+                        <td>A-</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>25</td>
+                        <td>50</td>
+                        <td>C+</td>
+                        <td>26</td>
+                        <td>52</td>
+                        <td>C+</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B-</td>
+                        <td>35</td>
+                        <td>70</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B</td>
+                        <td>29</td>
+                        <td>58</td>
+                        <td>C+</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>46</td>
+                        <td>92</td>
+                        <td>A</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>756</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Peter Muraya</td>
+                        <td>Male</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B</td>
+                        <td>45</td>
+                        <td>90</td>
+                        <td>A</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>20</td>
+                        <td>40</td>
+                        <td>D+</td>
+                        <td>31</td>
+                        <td>62</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B+</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>9</td>
+                        <td>18</td>
+                        <td>E</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>39</td>
+                        <td>78</td>
+                        <td>A-</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>25</td>
+                        <td>50</td>
+                        <td>C+</td>
+                        <td>26</td>
+                        <td>52</td>
+                        <td>C+</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B-</td>
+                        <td>35</td>
+                        <td>70</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B</td>
+                        <td>29</td>
+                        <td>58</td>
+                        <td>C+</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>46</td>
+                        <td>92</td>
+                        <td>A</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>756</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Peter Muraya</td>
+                        <td>Male</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B</td>
+                        <td>45</td>
+                        <td>90</td>
+                        <td>A</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>20</td>
+                        <td>40</td>
+                        <td>D+</td>
+                        <td>31</td>
+                        <td>62</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B+</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>9</td>
+                        <td>18</td>
+                        <td>E</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>39</td>
+                        <td>78</td>
+                        <td>A-</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>25</td>
+                        <td>50</td>
+                        <td>C+</td>
+                        <td>26</td>
+                        <td>52</td>
+                        <td>C+</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B-</td>
+                        <td>35</td>
+                        <td>70</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B</td>
+                        <td>29</td>
+                        <td>58</td>
+                        <td>C+</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>46</td>
+                        <td>92</td>
+                        <td>A</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>756</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Peter Muraya</td>
+                        <td>Male</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B</td>
+                        <td>45</td>
+                        <td>90</td>
+                        <td>A</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>20</td>
+                        <td>40</td>
+                        <td>D+</td>
+                        <td>31</td>
+                        <td>62</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B+</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>9</td>
+                        <td>18</td>
+                        <td>E</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>39</td>
+                        <td>78</td>
+                        <td>A-</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>25</td>
+                        <td>50</td>
+                        <td>C+</td>
+                        <td>26</td>
+                        <td>52</td>
+                        <td>C+</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B-</td>
+                        <td>35</td>
+                        <td>70</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B</td>
+                        <td>29</td>
+                        <td>58</td>
+                        <td>C+</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>46</td>
+                        <td>92</td>
+                        <td>A</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>756</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Peter Muraya</td>
+                        <td>Male</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B</td>
+                        <td>45</td>
+                        <td>90</td>
+                        <td>A</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>20</td>
+                        <td>40</td>
+                        <td>D+</td>
+                        <td>31</td>
+                        <td>62</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B+</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>9</td>
+                        <td>18</td>
+                        <td>E</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>39</td>
+                        <td>78</td>
+                        <td>A-</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>25</td>
+                        <td>50</td>
+                        <td>C+</td>
+                        <td>26</td>
+                        <td>52</td>
+                        <td>C+</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B-</td>
+                        <td>35</td>
+                        <td>70</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B</td>
+                        <td>29</td>
+                        <td>58</td>
+                        <td>C+</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>46</td>
+                        <td>92</td>
+                        <td>A</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>756</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Peter Muraya</td>
+                        <td>Male</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B</td>
+                        <td>45</td>
+                        <td>90</td>
+                        <td>A</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>20</td>
+                        <td>40</td>
+                        <td>D+</td>
+                        <td>31</td>
+                        <td>62</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B+</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>9</td>
+                        <td>18</td>
+                        <td>E</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>39</td>
+                        <td>78</td>
+                        <td>A-</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>25</td>
+                        <td>50</td>
+                        <td>C+</td>
+                        <td>26</td>
+                        <td>52</td>
+                        <td>C+</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B-</td>
+                        <td>35</td>
+                        <td>70</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B</td>
+                        <td>29</td>
+                        <td>58</td>
+                        <td>C+</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>46</td>
+                        <td>92</td>
+                        <td>A</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>756</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Peter Muraya</td>
+                        <td>Male</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B</td>
+                        <td>45</td>
+                        <td>90</td>
+                        <td>A</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>20</td>
+                        <td>40</td>
+                        <td>D+</td>
+                        <td>31</td>
+                        <td>62</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B+</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>9</td>
+                        <td>18</td>
+                        <td>E</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>39</td>
+                        <td>78</td>
+                        <td>A-</td>
+                        <td>50</td>
+                        <td>100</td>
+                        <td>A</td>
+                        <td>25</td>
+                        <td>50</td>
+                        <td>C+</td>
+                        <td>26</td>
+                        <td>52</td>
+                        <td>C+</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>B-</td>
+                        <td>35</td>
+                        <td>70</td>
+                        <td>B</td>
+                        <td>36</td>
+                        <td>72</td>
+                        <td>B</td>
+                        <td>29</td>
+                        <td>58</td>
+                        <td>C+</td>
+                        <td>40</td>
+                        <td>80</td>
+                        <td>A</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>46</td>
+                        <td>92</td>
+                        <td>A</td>
+                        <td>10</td>
+                        <td>20</td>
+                        <td>E</td>
+                        <td>37</td>
+                        <td>74</td>
+                        <td>B+</td>
+                        <td>756</td>
+                        <td>1</td>
+                    </tr>
+                </tboby>    
+            </table>
+           
+        </div>
+    </body>
+    <button id='go'>GO</button>
+    <button id='cancel'>Cancel</button>
+</html>

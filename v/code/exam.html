@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exam Results</title>
+        <link rel="stylesheet" href="exam.css">
+        <!--
+        Stylesheet for controlling edit/normal viewing mode. 
+        ??-->
+        <style id="mode">
+            /*
+            Display the sheet in normal mode*/
+            .normal{
+                display:flex;
+            }
+            
+            /*
+            Display the sheet in edit mode*/
+            .edit{
+                display:none;
+            }
+        </style>
+        
+        <script type="module">
+            //
+            import {exam} from "./exam.js";
+            //
+            //Create a new instance of exam
+            const Page = new exam();
+            //
+            //Let the page be accessible globally
+            window.Page = Page;
+            //
+            Page.show_panels();
+            
+        </script>
+        
+     </head>
+    <body id="sheet">
+        <div id="crown">
+            <label><span>Page Selector:</span>
+                <select name="Page Selector" id="paginator">
+                </select>
+            </label>
+            <details>
+                <summary>View Mode</summary>
+                <fieldset>
+                    <label id="edit">
+                        <input
+                            name="mode"
+                            value="edit"
+                            type="radio"
+                        >
+                        <span>Edit</span><br>
+                    </label>  
+                    <label >
+                        <button onclick="Page.save()">save</button>
+                    </label> 
+
+                    <label id="normal" >
+                        <input
+                            name="mode"
+                            value="normal"
+                            type="radio"
+                            checked
+                        >
+                        <span>Normal</span>
+                    </label>
+                </fieldset>
+                <button onclick='Page.load_excel_data()'>save_excel</button>
+                <button onclick='Page.metavisuo()'>metavisuo</button>
+                 <button onclick='Page.create_empty_worksheet()'>Empty</button>
+            </details>
+            <details>
+                <summary>chamber</summary>
+                <fieldset id="chamber" >
+                    <legend>Filters</legend>
+                </fieldset>
+            </details>
+            <details id="summary_type">
+                <summary>Summary Type</summary>
+                <details>
+                    <summary > Right margin </summary>
+                    <fieldset id="right_summary">
+                    <div id="summary"></div>
+                    <label >
+                        <input
+                            name="right_summary"
+                            value="sum"
+                            id="right_sum"
+                            type="checkbox"
+                        >
+                        <span>sum</span><br>
+                    </label>  
+                    <label >
+                        <input
+                            name="right_summary"
+                            value="count"
+                            id="right_count"
+                            type="checkbox"
+                        >
+                        <span>count</span>
+                    </label>  
+                    <label  >
+                        <input
+                            name="right_summary"
+                            value="avg"
+                            id="right_avg"
+                            type="checkbox"
+                        >
+                        <span>avg</span>
+                    </label>
+                </fieldset>
+                </details>
+                 <details>
+                    <summary >Bottom</summary>
+                    <fieldset id="bottom_summary">
+                    <div></div>
+                    <label >
+                        <input
+                            name="bottom_summary"
+                            value="sum"
+                            id="bottom_sum"
+                            type="checkbox"
+                        >
+                        <span>sum</span><br>
+                    </label>  
+                    <label >
+                        <input
+                            name="bottom_summary"
+                            value="count"
+                            id="bottom_count"
+                            type="checkbox"
+                        >
+                        <span>count</span>
+                    </label>  
+                    <label>
+                        <input
+                            name="bottom_summary"
+                            value="avg"
+                            id="bottom_avg"
+                            type="checkbox"
+                        >
+                        <span>avg</span>
+                    </label>
+                </fieldset>
+                </details>
+                <button id="refresh" onclick="Page.refresh()">refresh</button>
+            </details>
+            <!-- 
+            To support debugging of this page -->
+            <details>
+                <summary>Debug Services</summary>
+            <fieldset>
+                <button id="save_sql">Save Sql to Clipboard</button>
+            </fieldset>
+            </details>
+        </div>
+        <div id= "matrix_body" >
+            <table id="matrix">
+            <thead id="header">
+            </thead>
+            
+            <tbody id="body">
+            </tbody>
+            
+            <tfoot id="footer">
+            </tfoot>
+            
+            </table>
+        </div>
+    </body>
+    
+</html>

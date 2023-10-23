@@ -1,0 +1,59 @@
+[     
+    ["school_2", "class", [], "name", "8"],
+    ["school_2", "stream", [], "name", "Red"],
+    ["school_2", "stream", [], "id", "r"],
+    ["school_2", "exam", [], "name", "Class 8 Exam"],
+    
+
+    ["school_2", "year", [], "value", 2020],  
+    ["mutall_users", "business", [], "id", "KAPS"],
+    ["school_2", "school", [], "id", "KAPS"],
+    ["mutall_users", "business", [], "name", "Kiserian Adventist Primary School"],
+    ["school_2", "school", [], "name", "Kiserian Adventist Primary School"],
+    
+    ["school_2", "progress", [], "progress", null],
+    ["school_2", "sitting", [], "date", "2020-11-15"],
+    
+    {
+        "class_name":"\\mutall\\capture\\csv",
+        "args":[
+            "t1", 
+               "%s",
+            [],
+            ",",  
+            -1,
+            4
+        ]
+    },
+    
+    ["mutall_users", "user", [], "name", ["\\mutall\\capture\\lookup","t1", 0]],
+    ["school_2", "student", [], "name", ["\\mutall\\capture\\lookup","t1", 0]],
+    ["school_2", "student", [], "gender", ["\\mutall\\capture\\lookup","t1", 1]],
+    
+    ["school_2", "performance", ["eng"], "out_of", 100],
+    ["school_2", "subject", ["eng"], "id", "eng"],
+    ["school_2", "subject", ["eng"], "name", "English"],
+    ["school_2", "score", ["eng"], "value", ["\\mutall\\capture\\lookup","t1", 2]],
+  
+  
+    ["school_2", "performance", ["kis"], "out_of", 100],
+    ["school_2", "subject", ["kis"], "id", "kiswa"],
+    ["school_2", "subject", ["kis"], "name", "Kiswahili"],
+    ["school_2", "score", ["kis"], "value", ["\\mutall\\capture\\lookup","t1", 4]],
+    
+    ["school_2", "performance", ["maths"], "out_of", 100],
+    ["school_2", "subject", ["maths"], "id", "maths"],
+    ["school_2", "subject", ["maths"], "name", "Mathematics"],
+    ["school_2", "score", ["maths"], "value", ["\\mutall\\capture\\lookup","t1", 6]],
+    
+    ["school_2", "performance", ["sci"], "out_of", 100],
+    ["school_2", "subject", ["sci"], "id", "sci"],
+    ["school_2", "subject", ["sci"], "name", "Science"],
+    ["school_2", "score", ["sci"], "value", ["\\mutall\\capture\\lookup","t1", 8]],
+    
+    ["school_2", "performance", ["ss"], "out_of", 100],
+    ["school_2", "subject", ["ss"], "id", "ss"],
+    ["school_2", "subject", ["ss"], "name", "Social studies"],
+    ["school_2", "score", ["ss"], "value", ["\\mutall\\capture\\lookup","t1", 10]]
+    
+]

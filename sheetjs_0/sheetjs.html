@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--Test pad for sheet js.-->
+<html>
+    <head>
+        <title>Test</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="module">
+            //
+            //Importing the sheetjs library using CDN. Importin from here does not
+            //requires us to use the relative referencing required when we do it
+            //within a module
+            import * as xl from "https://cdn.sheetjs.com/xlsx-0.20.0/package/xlsx.mjs";
+            //
+            //Make xl a global variable, so we can use it for running our code. 
+            //It wont satisfy typescript
+            window.xl = xl;
+            //
+            //Impirt teh default class, in this case sheetjs
+            import  Page from "./sheetjs.js";
+            //
+            //Create a new page 
+            const page = new Page();
+            //
+            //Exposing the page variabe to be accessibe in HTML
+            window.page = page;
+        </script>
+    
+    </head>
+    <body>
+        <label>
+            Select file to upload:&nbsp;<input type="file" id="source"/>
+        </label>
+        <button onclick="page.load_file()">Upload</button>
+        
+    </body>
+</html>

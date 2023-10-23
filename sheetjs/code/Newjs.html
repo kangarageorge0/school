@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Newjs</title>
+    <link rel="stylesheet" href="Newjs.css">
+</head>
+
+<body>
+
+    <h2><u>Select Data To Load</u></h2>
+
+    <!-- the grand grand parent -->
+    <fieldset>
+        <legend>
+            <h2>Source of data </h2>
+        </legend>
+
+        <!-- x -->
+        <fieldset>
+            <legend>
+                <input type="radio" name="type" onclick="update_display(this)">
+                Digital Ocean
+            </legend>
+            <label>Specify Path:
+                <input type="text" name="fileInput" >
+                <input type="button" value="Browse">
+            </label>
+        </fieldset>
+
+        <!-- y1 -->
+        <fieldset>
+            <legend><input type="radio" name="type">Local Client</legend>
+            <fieldset>
+                <legend>
+                    <h3>Do You Want to Load Single or Multiple Files?</h3>
+                </legend>
+                <fieldset>
+                    <legend> <input type="radio" name="type" checked="checked">Single </legend>
+
+                    <fieldset>
+                        <legend> Choose a workbook </legend>
+                        <input type="file">
+                    </fieldset>
+
+                    <label>
+                        Choose a worksheet
+
+                        <select>
+                            <option></option>
+                            <option>Detailed</option>
+                            <option>Audit</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        &nbsp;&nbsp; Choose a Named Range
+                        <select>
+                            <option></option>
+                            <option>Technologent</option>
+                            <option>Groupon</option>
+                        </select>
+                    </label>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend> <input type="radio" name="type">Multiple</legend>
+                    <input type="file" multiple>
+                </fieldset>
+
+
+            </fieldset>
+
+        </fieldset>
+
+        <!-- y2 -->
+        <fieldset>
+            <legend><input type="radio" name="type">Other Server</legend>
+            <label>Specify URL:
+                <input type="text">
+            </label>
+
+        </fieldset>
+
+    </fieldset>
+
+
+
+
+    <button onclick="alert('saved')">Save</button>
+    <button onclick="alert('Cancelled')">Cancel</button>
+
+</body>
+
+</html>

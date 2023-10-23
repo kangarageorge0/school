@@ -1,0 +1,117 @@
+[
+    ["school_2", "class", [], "name", "4"],
+    ["school_2", "stream", [], "name", "Yellow"],
+    ["school_2", "stream", [], "id", "y"],
+    ["school_2", "exam", [], "name", "Targeter EXAM"],
+    
+    ["school_2", "year", [], "value", "2020"],  
+    ["mutall_users", "business", [], "id", "KAPS"],
+    ["school_2", "school", [], "id", "KAPS"],
+    ["mutall_users", "business", [], "name", "Kiserian Adventist Primary School"],
+    ["school_2", "school", [], "name", "Kiserian Adventist Primary School"],
+    
+    ["school_2", "progress", [], "progress", null],
+    ["school_2", "sitting", [], "date", "2020-12-16"],
+    {
+        "class_name":"\\mutall\\capture\\csv",
+        "args":[
+            "t1", 
+              "%s",
+            [],
+            ",",  
+            -1,
+            5
+        ]
+    },
+    
+    ["mutall_users", "user", [], "name", ["\\mutall\\capture\\lookup","t1", 0]],
+    ["school_2", "student", [], "name", ["\\mutall\\capture\\lookup","t1", 0]],
+    
+    ["school_2", "performance", ["maths"], "out_of", 50],
+    ["school_2", "subject", ["maths"], "id", "maths"],
+    ["school_2", "subject", ["maths"], "name", "Mathematics"],
+    ["school_2", "score", ["maths"], "value", ["\\mutall\\capture\\lookup","t1", 1]],
+    
+    ["school_2", "performance", ["engl"], "out_of", 25],
+    ["school_2", "subject", ["engl"], "id", "engl"],
+    ["school_2", "subject", ["engl"], "name", "english language"],
+    ["school_2", "score", ["engl"], "value", ["\\mutall\\capture\\lookup","t1", 4]],
+    
+    ["school_2", "performance", ["n_o_w"], "out_of", 100],
+    ["school_2", "subject", ["n_o_w"], "id", "n_o_w"],
+    ["school_2", "subject", ["n_o_w"], "name", "no of words"],
+    ["school_2", "score", ["n_o_w"], "value", ["\\mutall\\capture\\lookup","t1", 6]],
+    
+    ["school_2", "performance", ["com"], "out_of", 10],
+    ["school_2", "subject", ["com"], "id", "com"],
+    ["school_2", "subject", ["com"], "name", "comprehension"],
+    ["school_2", "score", ["com"], "value", ["\\mutall\\capture\\lookup","t1", 8]],
+    
+    ["school_2", "performance", ["comp"], "out_of", 10],
+    ["school_2", "subject", ["comp"], "id", "comp"],
+    ["school_2", "subject", ["comp"], "name", "composition"],
+    ["school_2", "score", ["comp"], "value", ["\\mutall\\capture\\lookup","t1", 10]],
+    ["school_2", "score", ["comp"], "percent", ["\\mutall\\capture\\lookup","t1", 11]],
+    
+    ["school_2", "performance", ["kus"], "out_of", 100],
+    ["school_2", "subject", ["kus"], "id", "kus"],
+    ["school_2", "subject", ["kus"], "name", "kusoma"],
+    ["school_2", "score", ["kus"], "value", ["\\mutall\\capture\\lookup","t1", 13]],
+    
+    ["school_2", "performance", ["ufa"], "out_of", 10],
+    ["school_2", "subject", ["ufa"], "id", "ufa"],
+    ["school_2", "subject", ["ufa"], "name", "ufahamu"],
+    ["school_2", "score", ["ufa"], "value", ["\\mutall\\capture\\lookup","t1", 15]],
+
+    ["school_2", "performance", ["sar"], "out_of", 20],
+    ["school_2", "subject", ["sar"], "id", "sar"],
+    ["school_2", "subject", ["sar"], "name", "sarufi"],
+    ["school_2", "score", ["sar"], "value", ["\\mutall\\capture\\lookup","t1", 17]],
+   
+    ["school_2", "performance", ["ins"], "out_of", 10],
+    ["school_2", "subject", ["ins"], "id", "ins"],
+    ["school_2", "subject", ["ins"], "name", "insha"],
+    ["school_2", "score", ["ins"], "value", ["\\mutall\\capture\\lookup","t1", 19]],
+
+    ["school_2", "performance", ["hsc"], "out_of", 25],
+    ["school_2", "subject", ["hsc"], "id", "hsc"],
+    ["school_2", "subject", ["hsc"], "name", "Health science"],
+    ["school_2", "score", ["hsc"], "value", ["\\mutall\\capture\\lookup","t1", 22]],
+     
+    ["school_2", "performance", ["sci"], "out_of", 25],
+    ["school_2", "subject", ["sci"], "id", "sci"],
+    ["school_2", "subject", ["sci"], "name", "Science"],
+    ["school_2", "score", ["sci"], "value", ["\\mutall\\capture\\lookup","t1", 25]],
+ 
+    ["school_2", "performance", ["music"], "out_of", 10],
+    ["school_2", "subject", ["music"], "id", "music"],
+    ["school_2", "subject", ["music"], "name", "Music"],
+    ["school_2", "score", ["music"], "value", ["\\mutall\\capture\\lookup","t1", 28]],
+   
+    ["school_2", "performance", ["agri"], "out_of", 25],
+    ["school_2", "subject", ["agri"], "id", "agri"],
+    ["school_2", "subject", ["agri"], "name", "Agriculture"],
+    ["school_2", "score", ["agri"], "value", ["\\mutall\\capture\\lookup","t1", 31]],
+
+    ["school_2", "performance", ["env"], "out_of", 30],
+    ["school_2", "subject", ["env"], "id", "env"],
+    ["school_2", "subject", ["env"], "name", "Environmental"],
+    ["school_2", "score", ["env"], "value", ["\\mutall\\capture\\lookup","t1", 34]],
+    
+    ["school_2", "performance", ["cre"], "out_of", 15],
+    ["school_2", "subject", ["cre"], "id", "cre"],
+    ["school_2", "subject", ["cre"], "name", "Health science"],
+    ["school_2", "score", ["cre"], "value", ["\\mutall\\capture\\lookup","t1", 37]],
+    
+    ["school_2", "performance", ["art"], "out_of", 10],
+    ["school_2", "subject", ["art"], "id", "art"],
+    ["school_2", "subject", ["art"], "name", "ArtandCraft"],
+    ["school_2", "score", ["art"], "value", ["\\mutall\\capture\\lookup","t1", 40]],
+     
+    ["school_2", "performance", ["phe"], "out_of", 20],
+    ["school_2", "subject", ["phe"], "id", "phe"],
+    ["school_2", "subject", ["phe"], "name", "PhysicalEducation"],
+    ["school_2", "score", ["phe"], "value", ["\\mutall\\capture\\lookup","t1", 43]]
+
+   
+]
